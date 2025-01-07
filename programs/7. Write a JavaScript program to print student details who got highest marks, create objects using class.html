@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Student{
+            constructor(name, rollNumber, marks){
+                this.name = name;
+                this.rollNumber = rollNumber;
+                this.marks = marks;
+            }
+        
+            getDetails(){
+            return `name:${this.name}, roll number:${this.rollNumber}, marks:${this.marks}`;
+        }
+    }
+
+        var students=[
+            new Student("man",1,89),
+            new Student("raj",2,78),
+            new Student("jai",3,98)
+        ];
+
+        let topStudent = students[0];
+        for(i=0;i<students.length;i++){
+            if(students[i].marks>topStudent.marks){
+                topStudent=students[i];
+            }
+        }
+        console.log("students with highest marks; ");
+        console.log(topStudent.getDetails());
+
+        
+    </script>
+</body>
+</html>

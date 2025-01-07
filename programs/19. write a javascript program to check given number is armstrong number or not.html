@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var a = parseInt(prompt("Enter a num"))
+        var b = a.toString().length;
+        var c = a;
+        var sum = 0;
+        
+        while(c!=0){
+
+            rem = c%10;
+            sum  = sum + rem**b
+            c = parseInt(c/10);
+            
+        }
+        console.log(sum);
+        
+        
+        if(a==sum){
+            console.log("Armstrong");
+        }
+        else{
+            console.log("N0t Armstrong");
+        }
+
+    </script>
+</body>
+</html>
